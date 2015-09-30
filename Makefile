@@ -9,7 +9,7 @@ EXE = .exe
 RM = del
 endif
 
-CFLAGS = -ffunction-sections -O3
+CFLAGS = -ffunction-sections -O3 -Wno-error=unused-result
 LDFLAGS = -Wl,--gc-sections
 
 all:libmincrypt.a mkbootimg$(EXE) unpackbootimg$(EXE)
